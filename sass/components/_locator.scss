@@ -1,0 +1,12 @@
+.locator {
+  background-color: darken($color-light-grey, 5%);
+  text-align: center;
+  padding: 15px 0;
+  font-weight: $font-weight-medium;
+  font-size: 1.1rem;
+  color: $color-dark-grey;
+
+  span {
+    padding-left: 10px;
+  }
+}

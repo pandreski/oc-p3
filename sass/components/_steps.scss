@@ -1,0 +1,19 @@
+.steps {
+  margin-top: 50px;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 40px;
+    margin-top: 0;
+  }
+
+  &__title {
+    @include media-breakpoint-up(md) {
+      text-align: center;
+      font-size: 22px;
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+}

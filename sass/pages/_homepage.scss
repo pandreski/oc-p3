@@ -1,0 +1,88 @@
+.homepage {
+  header {
+    .site-title {
+      box-shadow: 0 0 8px 2px #aaa;;
+    }
+  }
+
+  .presentation {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 50px 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        width: 100vw;
+        background-color: $color-light-grey;
+        z-index: -1;
+      }
+    }
+
+    .reinsurance {
+      @include media-breakpoint-up(md) {
+        flex: 0 1 50%;
+      }
+    }
+
+    .steps {
+      @include media-breakpoint-up(md) {
+        flex: 0 1 50%;
+      }
+    }
+  }
+
+  .restaurants {
+    position: relative;
+    margin-top: 50px;
+    padding: {
+      top: 50px;
+      bottom: 50px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%);
+      background-color: $color-light-grey;
+      z-index: -1;
+    }
+
+    .card + .card {
+      margin-top: 20px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
+    }
+
+    &__list {
+      @include media-breakpoint-up(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include media-breakpoint-up(xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

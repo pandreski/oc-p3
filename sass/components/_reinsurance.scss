@@ -1,0 +1,29 @@
+.reinsurance {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: $color-light-grey;
+    z-index: -1;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__description {
+    font-size: 17px;
+  }
+
+  .btn {
+    margin-top: 2.3rem;
+  }
+}
