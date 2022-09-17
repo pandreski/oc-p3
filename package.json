@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "sass": "sass --no-source-map ./sass/main.scss:./css/main.css -w --style compressed",
-    "prefix": "postcss ./css/main.css --use autoprefixer -d ./public/css/"
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./docs/css/"
   },
   "dependencies": {
     "autoprefixer": "^10.4.11",
