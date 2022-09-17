@@ -1,13 +1,43 @@
 @use "sass:math";
 
 .page-restaurant {
-  .illustration {
+  header {
     position: relative;
+  }
 
-    &:before {
-      content: '';
-      display: block;
-      padding-bottom: math.percentage(math.div(270,375));
+  main {
+    @extend .container;
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .illustration {
+    @include media-breakpoint-up(md) {
+      flex: 0 1 50%;
+    }
+
+    &__wrapper {
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: math.percentage(math.div(270,375));
+
+        @include media-breakpoint-up(md) {
+          padding-bottom: math.percentage(math.div(9,16));
+        }
+        @include media-breakpoint-up(lg) {
+          padding-bottom: math.percentage(math.div(3,4));
+        }
+      }
     }
 
     img {
@@ -25,7 +55,23 @@
     border-radius: 40px 40px 0 0;
     position: relative;
     margin-top: -50px;
-    padding: 30px 0 50px 0;
+    padding: 30px 20px 50px;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 80%;
+      display: block;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 1 50%;
+      margin-top: 80px;
+      transform: translateX(-100px);
+      max-width: unset;
+    }
   }
 
   .heading {
