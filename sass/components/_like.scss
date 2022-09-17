@@ -1,0 +1,25 @@
+.like {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  .fa-solid {
+    display: none;
+    background: #FF79DA;
+    background: linear-gradient(to bottom left, #FF79DA 0%, #9356DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  &:hover {
+    .fa-regular {
+      display: none;
+    }
+    .fa-solid {
+      display: block;
+    }
+  }
+}

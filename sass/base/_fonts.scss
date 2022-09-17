@@ -12,3 +12,27 @@
   font-weight: $font-weight-bold;
   line-height: 1.9rem;
 }
+
+.title--underlined {
+  text-transform: uppercase;
+  font-weight: $font-weight-default;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 3px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: $color-tertiary;
+  }
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

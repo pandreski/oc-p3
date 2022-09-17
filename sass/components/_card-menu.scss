@@ -1,0 +1,66 @@
+.card-menu {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px 0 #dedede;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &:hover {
+    @include media-breakpoint-up(lg) {
+      cursor: pointer;
+
+      .card-menu__content {
+        max-width: calc(100% - 55px);
+      }
+
+      .card-menu__selection {
+        max-width: 55px;
+
+        i {
+          transform: rotate(0);
+          transition: transform .4s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding: 10px 20px 10px 10px;
+    max-width: 100%;
+    transition: max-width .3s ease-in-out;
+
+    .title {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+    }
+
+    .info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 5px;
+
+      &__price {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  &__selection {
+    flex: 0 1 55px;
+    background-color: $color-tertiary;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    max-width: 0;
+    transition: max-width .3s ease-in-out;
+
+    i {
+      transform: rotate(-360deg);
+    }
+  }
+}
