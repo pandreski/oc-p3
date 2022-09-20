@@ -4,6 +4,7 @@
 @import "base/scaffolding";
 @import "base/fonts";
 
+@import "layout/animations";
 @import "layout/footer";
 @import "layout/header";
 
@@ -13,7 +14,7 @@
 @import "components/buttons";
 @import "components/card";
 @import "components/card-menu";
-@import "components/like";
+@import "components/loader";
 @import "components/locator";
 @import "components/reinsurance";
 @import "components/step";

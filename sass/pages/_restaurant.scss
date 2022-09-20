@@ -88,8 +88,24 @@
     }
   }
 
+  @keyframes card-apparition {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
   .menu-group {
     margin-top: 40px;
+
+    &__cards {
+      @each $i in 1,2,3 {
+        .card-menu:nth-child(#{$i}) {
+          opacity: 0;
+          animation: card-apparition ease-in-out .4s;
+          animation-delay: #{$i * 150 + 300}ms;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
   }
 
   .card-menu {

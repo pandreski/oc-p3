@@ -13,8 +13,48 @@
 
   &:hover {
     @include media-breakpoint-up(lg) {
-      box-shadow: 0 3px 14px 0 #c0c0c0;
-      transform: translateY(-2px);
+      box-shadow: 0 3px 14px 0 #8f8f8f;
+      opacity: .9;
+    }
+  }
+}
+
+.like {
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  .fa-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .fa-regular {
+    transition: opacity .2s ease-in-out;
+  }
+
+  .fa-solid {
+    opacity: 0;
+    background: #FF79DA;
+    background: linear-gradient(to bottom left, #FF79DA 0%, #9356DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity .2s ease-in-out;
+  }
+
+  &:hover {
+    .fa-regular {
+      opacity: 0;
+    }
+    .fa-solid {
+      opacity: 1;
     }
   }
 }
