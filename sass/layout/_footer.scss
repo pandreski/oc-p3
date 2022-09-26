@@ -28,6 +28,10 @@ footer {
     &:hover {
       color: $color-tertiary;
     }
+
+    > i {
+      width: 1.5rem;
+    }
   }
 
   ul {
