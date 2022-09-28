@@ -1,10 +1,25 @@
 .step {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
   background-color: $color-light-grey;
   border-radius: 20px;
   padding: 30px 20px 30px 30px;
   position: relative;
   margin-left: 10px;
   box-shadow: 0 3px 5px 2px #e7e7e7;
+  color: black;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: lighten($color-primary, 37%);
+
+    i {
+      color: $color-primary;
+    }
+  }
 
   + .step {
     margin-top: 20px;
@@ -13,6 +28,7 @@
   i {
     color: lighten($color-dark-grey, 15%);
     font-size: 1.2rem;
+    transition: color .2s ease-in-out;
   }
 
   &__number {

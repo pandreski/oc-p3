@@ -7,20 +7,18 @@
   overflow: hidden;
 
   &:hover {
-    @include media-breakpoint-up(lg) {
-      cursor: pointer;
+    cursor: pointer;
 
-      .card-menu__content {
-        max-width: calc(100% - 55px);
-      }
+    .card-menu__content {
+      max-width: calc(100% - 55px);
+    }
 
-      .card-menu__selection {
-        max-width: 55px;
+    .card-menu__selection {
+      max-width: 55px;
 
-        i {
-          transform: rotate(0);
-          transition: transform .4s ease-in-out;
-        }
+      i {
+        transform: rotate(0);
+        transition: transform .4s ease-in-out;
       }
     }
   }

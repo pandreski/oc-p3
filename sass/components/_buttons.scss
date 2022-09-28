@@ -37,7 +37,7 @@
   }
 
   .fa-regular {
-    transition: opacity .2s ease-in-out;
+    transition: opacity .5s ease-in-out;
   }
 
   .fa-solid {
@@ -46,7 +46,7 @@
     background: linear-gradient(to bottom left, #FF79DA 0%, #9356DC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: opacity .2s ease-in-out;
+    transition: opacity .5s ease-in-out;
   }
 
   &:hover {
